@@ -1,0 +1,17 @@
+
+ /***
+ * Sæt beskrvelsen under dropdown feltet i produktoprettelsen
+ * 
+ **/ 
+p.form-field.flexible_amount_field .description {
+    display: block;
+    clear: both;
+}
+
+ /***
+ * Fjern besked om at man ikke behøver ændre i style.css i tema-editoren
+ * 
+ **/ 
+.theme-editor-php #message {
+    display: none;
+}

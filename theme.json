@@ -1,0 +1,112 @@
+{
+  "version": 2,
+  "settings": {
+    "color": {
+      "custom": true,
+      "customGradient": true,
+      "palette": [
+        {
+          "name": "Text",
+          "slug": "txt",
+          "color": "#2d2d2d"
+        },
+        {
+          "name": "Light",
+          "slug": "light",
+          "color": "#eaeaea"
+        },
+        {
+          "name": "Dark Variant",
+          "slug": "dark-variant",
+          "color": "#2f343d"
+        },
+        {
+          "name": "Light Variant",
+          "slug": "light-variant",
+          "color": "#d6d6d6"
+        },
+        {
+          "name": "White",
+          "slug": "white",
+          "color": "#ffffff"
+        }
+      ],
+      "gradients": [
+        {
+          "name": "Primary Gradient",
+          "slug": "primary-gradient",
+          "gradient": "linear-gradient(135deg, #2d2d2d, #eaeaea)"
+        }
+      ]
+    },
+    "typography": {
+      "fontSizes": [
+        {
+          "name": "Small",
+          "slug": "small",
+          "size": "12px"
+        },
+        {
+          "name": "Medium",
+          "slug": "medium",
+          "size": "16px"
+        },
+        {
+          "name": "Large",
+          "slug": "large",
+          "size": "24px"
+        }
+      ],
+      "customFontSize": true,
+      "lineHeight": true,
+      "fontFamilies": [
+        {
+          "name": "Titillium Web",
+          "slug": "titillium-web",
+          "fontFamily": "'Titillium Web', sans-serif"
+        }
+      ]
+    },
+    "spacing": {
+      "units": ["px", "em", "rem", "%"],
+      "padding": {
+        "top": "10px",
+        "right": "10px",
+        "bottom": "10px",
+        "left": "10px"
+      },
+      "blockGap": "1.5rem"
+    },
+    "layout": {
+      "contentSize": "800px",
+      "wideSize": "1200px"
+    }
+  },
+  "styles": {
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--titillium-web)"
+    },
+    "color": {
+      "text": "var(--wp--preset--color--txt)",
+      "background": "var(--wp--preset--color--white)"
+    },
+    "elements": {
+      "button": {
+        "color": {
+          "background": "var(--wp--preset--color--dark-variant)",
+          "text": "var(--wp--preset--color--light)"
+        },
+        "border": {
+          "radius": "4px"
+        }
+      },
+      "paragraph": {
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--medium)",
+          "lineHeight": "1.6",
+          "fontFamily": "var(--wp--preset--font-family--titillium-web)"
+        }
+      }
+    }
+  }
+}
