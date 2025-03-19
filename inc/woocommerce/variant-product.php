@@ -18,9 +18,12 @@ function save_custom_price_in_cart_data($cart_item_data, $product_id) {
             }
         } elseif ($_POST['price_option'] == 'input_length') {
             $cart_item_data['custom_length'] = floatval($_POST['input_length']);
+            $cart_item_data['hide_variation_data'] = true;
+
         } elseif ($_POST['price_option'] == 'input_length_height') {
             $cart_item_data['custom_length'] = floatval($_POST['input_length']);
             $cart_item_data['custom_width'] = floatval($_POST['input_width']);
+            $cart_item_data['hide_variation_data'] = true;
         }
     }
 
@@ -125,3 +128,20 @@ function apply_custom_price_to_cart($cart) {
         }
     }
 }
+
+add_filter('woocommerce_get_item_data', function($item_data, $cart_item) {
+    if (isset($cart_item['custom_length']) && isset($cart_item['custom_width'])) {
+        // Tilføj din egen værdi
+        $item_data[] = [
+            'key'   => __('Dimension', 'woocommerce'),
+            'value' => wc_clean($cart_item['custom_length']) . ' mm x ' . wc_clean($cart_item['custom_width']) . ' mm',
+        ];
+    } else if (isset($cart_item['custom_length'])) {
+        // Tilføj din egen værdi
+        $item_data[] = [
+            'key'   => __('Længde', 'woocommerce'),
+            'value' => wc_clean($cart_item['custom_length']) . ' mm',
+        ];
+    }
+    return $item_data;
+}, 20, 2);
