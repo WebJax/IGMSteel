@@ -213,6 +213,24 @@ nav.custom-breadcrumb a:hover {
 
 /* Shop oversigten */
 
+.modern-cart-item-price .woocommerce-Price-amount.amount bdi {
+  font-weight: 300;
+}
+
+section.container.sideindhold.wctemplate row {
+  width: 90%;
+}
+
+.container.sideindhold.wctemplate .row {
+  width: 70%;
+}
+
+.container.sideindhold.wctemplate .offset-by-two.column.eight.columns {
+  margin: auto;
+  width: 100%;
+}
+
+
 .woocommerce ul.products[class*=columns-] li.product, .woocommerce-page ul.products[class*=columns-] li.product {
 	text-align: left;
 	width: 100%;
