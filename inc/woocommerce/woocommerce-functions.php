@@ -27,6 +27,9 @@ require get_template_directory() . '/inc/woocommerce/variant-product.php';
 // Inkluder produktet i kurven
 require get_template_directory() . '/inc/woocommerce/menu-cart.php';
 
+// Inkluder firmanavn i ordrer
+require get_template_directory() . '/inc/woocommerce/add-company-name.php';
+
 /**
  * Modifies the product gallery template to use a custom template.
  *
