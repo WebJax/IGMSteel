@@ -4,6 +4,8 @@ add_filter('woocommerce_billing_fields', function($fields) {
     $fields['billing_company']['priority'] = 25;
     $fields['billing_company']['required'] = false; // Gør det valgfrit (eller true hvis det skal være påkrævet)
     $fields['billing_company']['autocomplete'] = 'organization'; // Hjælper med autofill
+    $fields['billing_company']['label'] = __('Firmanavn', 'woocommerce'); // Sørg for, at label er sat
+    $fields['billing_company']['placeholder'] = __('Indtast firmanavn', 'woocommerce'); // Tilføj placeholder
     return $fields;
 });
 
